@@ -4,6 +4,10 @@
 ## How to Run
 - Download https://github.com/shalzuth/D2Launcher/releases/download/beta/D2Launcher.exe, or compile from source
 - Launch Exe
-![AppPreview](ingame.png)
-- Click Launch
+
+
 ![GamePreview](launcher.png)
+- Click Launch
+
+
+![AppPreview](ingame.png)
