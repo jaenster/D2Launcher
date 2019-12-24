@@ -35,6 +35,7 @@
             this.xpakCdKey = new System.Windows.Forms.TextBox();
             this.launchButton = new System.Windows.Forms.Button();
             this.sound = new System.Windows.Forms.CheckBox();
+            this.sleepy = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // multi
@@ -42,7 +43,7 @@
             this.multi.AutoSize = true;
             this.multi.Checked = true;
             this.multi.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.multi.Location = new System.Drawing.Point(105, 90);
+            this.multi.Location = new System.Drawing.Point(87, 90);
             this.multi.Name = "multi";
             this.multi.Size = new System.Drawing.Size(48, 17);
             this.multi.TabIndex = 0;
@@ -97,18 +98,29 @@
             this.sound.AutoSize = true;
             this.sound.Checked = true;
             this.sound.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.sound.Location = new System.Drawing.Point(194, 90);
+            this.sound.Location = new System.Drawing.Point(142, 90);
             this.sound.Name = "sound";
             this.sound.Size = new System.Drawing.Size(57, 17);
             this.sound.TabIndex = 6;
             this.sound.Text = "Sound";
             this.sound.UseVisualStyleBackColor = true;
             // 
+            // sleepy
+            // 
+            this.sleepy.AutoSize = true;
+            this.sleepy.Location = new System.Drawing.Point(201, 90);
+            this.sleepy.Name = "sleepy";
+            this.sleepy.Size = new System.Drawing.Size(58, 17);
+            this.sleepy.TabIndex = 7;
+            this.sleepy.Text = "Sleepy";
+            this.sleepy.UseVisualStyleBackColor = true;
+            // 
             // MainWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(263, 146);
+            this.Controls.Add(this.sleepy);
             this.Controls.Add(this.sound);
             this.Controls.Add(this.launchButton);
             this.Controls.Add(this.xpakCdKey);
@@ -135,6 +147,7 @@
         private System.Windows.Forms.TextBox xpakCdKey;
         private System.Windows.Forms.Button launchButton;
         private System.Windows.Forms.CheckBox sound;
+        private System.Windows.Forms.CheckBox sleepy;
     }
 }
 

@@ -31,6 +31,7 @@ namespace D2Launcher
             var procHandle = pi.hProcess;// OpenProcess(0x001F0FFF, false, startedProcess.Id);
             var moduleBase = (IntPtr)0x400000; // startedProcess.MainModule.BaseAddress doesn't work in suspended since crt/app isn't loaded yet?
             if (multi.Checked) WriteProcessMemory(procHandle, moduleBase + 0xF562A, new Byte[] { 0xDB }, 1, 0); // replace (test eax, eax) with (test ebx, ebx), same window check
+            if (sleepy.Checked) WriteProcessMemory(procHandle, moduleBase + 0x51C31, new Byte[] { 0x90, 0x90 }, 2, 0);
             WriteProcessMemory(procHandle, moduleBase + 0x11FE3B, new Byte[] { 0x90, 0x90, 0x90, 0x90, 0x90, 0x90 }, 6, 0); // remove extrawork
             if (highRes.Checked) ChangeTo1080(procHandle, moduleBase);
             ResumeThread(pi.hThread);
